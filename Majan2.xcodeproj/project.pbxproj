@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550836361F21858900E55BF4 /* ToituKekkahyouji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550836351F21858900E55BF4 /* ToituKekkahyouji.swift */; };
 		555ACCF91F20894F00DE2051 /* Yaku64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555ACCF81F20894F00DE2051 /* Yaku64.swift */; };
 		555ACCFB1F208D6000DE2051 /* Yaku48.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555ACCFA1F208D6000DE2051 /* Yaku48.swift */; };
 		555ACCFD1F208E8000DE2051 /* Yaku32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555ACCFC1F208E8000DE2051 /* Yaku32.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		550836351F21858900E55BF4 /* ToituKekkahyouji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToituKekkahyouji.swift; sourceTree = "<group>"; };
 		555ACCF81F20894F00DE2051 /* Yaku64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yaku64.swift; sourceTree = "<group>"; };
 		555ACCFA1F208D6000DE2051 /* Yaku48.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yaku48.swift; sourceTree = "<group>"; };
 		555ACCFC1F208E8000DE2051 /* Yaku32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yaku32.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				5574772F1F1F895F003FBC6F /* AppDelegate.swift */,
 				557477311F1F895F003FBC6F /* ViewController.swift */,
 				557477331F1F895F003FBC6F /* Main.storyboard */,
+				550836351F21858900E55BF4 /* ToituKekkahyouji.swift */,
 				55D062811F20D1F400556C90 /* Toitukei.swift */,
 				5574775F1F1F9A5A003FBC6F /* KekkaHyouji.swift */,
 				5574775D1F1F910A003FBC6F /* TensuCal.swift */,
@@ -319,6 +322,7 @@
 				555ACD051F20946100DE2051 /* Yaku8.swift in Sources */,
 				55D062841F20D86100556C90 /* YakuToitu.swift in Sources */,
 				555ACD091F20968B00DE2051 /* Yaku4.swift in Sources */,
+				550836361F21858900E55BF4 /* ToituKekkahyouji.swift in Sources */,
 				555ACD031F20938100DE2051 /* Yaku12.swift in Sources */,
 				555ACCFD1F208E8000DE2051 /* Yaku32.swift in Sources */,
 				555ACD011F20917300DE2051 /* Yaku16.swift in Sources */,

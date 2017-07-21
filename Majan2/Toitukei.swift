@@ -35,6 +35,9 @@ class Toitukei: UIViewController {
     // ツモかどうか
     var tumo = false
     
+    // 全役名
+    var yakumei = [String]()
+    
     
     
     @IBAction func kakunin(_ sender: Any) {
@@ -62,6 +65,15 @@ class Toitukei: UIViewController {
         }
         
         all = man + pin + sou + ji
+        
+        let agarikei = YakuToitu(t1: toi1, t2: toi2, t3: toi3, t4: toi4, t5: toi5, t6: toi6, t7: toi7, m: man, p: pin, s: sou, j: ji, a: all, t: tumo)
+        let henkanKansu = CheckYaku(m1: [], m2: [], m3: [], m4: [], h: 0, k1: 0, k2: 0, k3: 0, k4: 0, m: [], p: [], s: [], j: [], a: [], n: [], t: true, b: 0, i: 0)
+        yakumei = henkanKansu.henkan(yaku: agarikei.check())
+        
+    }
+    
+    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
+        
     }
     
     
@@ -74,6 +86,14 @@ class Toitukei: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toToitu" {
+            //            let x = men1.text!
+            let tes = segue.destination as! ToituKekkahyouji
+            tes.str = yakumei
+        }
     }
     
 
