@@ -152,10 +152,31 @@ class CheckYaku {
         x1.ipankao(k1: kata1, k2: kata2, k3: kata3, k4:kata4, m1: men1, m2: men2, m3: men3, m4: men4)
         x1.sishanfon(k1: kata1, k2: kata2, k3: kata3, k4:kata4, m1: men1, m2: men2, m3: men3, m4: men4)
         x1.renryu(k1: kata1, k2: kata2, k3: kata3, k4:kata4, m1: men1, m2: men2, m3: men3, m4: men4)
+        x1.raoshaohu(m1: men1, m2: men2, m3: men3, m4: men4)
+        x1.yaochuku(k1: kata1, k2: kata2, k3: kata3, k4: kata4, m1: men1, m2: men2, m3: men3, m4: men4)
+        x1.minkan(k1: kata1, k2: kata2, k3: kata3, k4: kata4, n: naki)
+        x1.cheimen(m: man, p: pin, s: sou)
+        x1.uzu(j: ji)
+        x1.tumoagari(t: tumo)
         yaku = x1.yaku
         
         
         print(yaku)
+        
+        //貼り付け一回
+        if yaku[69] == 2, yaku[70] == 2 {
+            yaku[69] -= 1
+        }
+        if yaku[70] == 2, yaku[71] == 2 {
+            yaku[70] -= 1
+        }
+        if yaku[70] == 2, yaku[72] == 2 {
+            yaku[70] -= 1
+        }
+        if yaku[38] == 1, yaku[70] >= 1, yaku[71] >= 1 {
+            yaku[70] = 0
+        }
+        
         return yaku
     }
     

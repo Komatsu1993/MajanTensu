@@ -29,6 +29,8 @@
 		557477601F1F9A5A003FBC6F /* KekkaHyouji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5574775F1F1F9A5A003FBC6F /* KekkaHyouji.swift */; };
 		557477DC1F1FDB57003FBC6F /* Yaku88.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557477DB1F1FDB57003FBC6F /* Yaku88.swift */; };
 		557477DE1F1FE1CA003FBC6F /* CheckYaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557477DD1F1FE1CA003FBC6F /* CheckYaku.swift */; };
+		55D062821F20D1F400556C90 /* Toitukei.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D062811F20D1F400556C90 /* Toitukei.swift */; };
+		55D062841F20D86100556C90 /* YakuToitu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D062831F20D86100556C90 /* YakuToitu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		5574775F1F1F9A5A003FBC6F /* KekkaHyouji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KekkaHyouji.swift; sourceTree = "<group>"; };
 		557477DB1F1FDB57003FBC6F /* Yaku88.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yaku88.swift; sourceTree = "<group>"; };
 		557477DD1F1FE1CA003FBC6F /* CheckYaku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckYaku.swift; sourceTree = "<group>"; };
+		55D062811F20D1F400556C90 /* Toitukei.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toitukei.swift; sourceTree = "<group>"; };
+		55D062831F20D86100556C90 /* YakuToitu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YakuToitu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 				5574772F1F1F895F003FBC6F /* AppDelegate.swift */,
 				557477311F1F895F003FBC6F /* ViewController.swift */,
 				557477331F1F895F003FBC6F /* Main.storyboard */,
+				55D062811F20D1F400556C90 /* Toitukei.swift */,
 				5574775F1F1F9A5A003FBC6F /* KekkaHyouji.swift */,
 				5574775D1F1F910A003FBC6F /* TensuCal.swift */,
 				557477361F1F895F003FBC6F /* Assets.xcassets */,
@@ -148,6 +153,7 @@
 				555ACD081F20968B00DE2051 /* Yaku4.swift */,
 				555ACD0A1F20977400DE2051 /* Yaku2.swift */,
 				555ACD0C1F20989E00DE2051 /* Yaku1.swift */,
+				55D062831F20D86100556C90 /* YakuToitu.swift */,
 			);
 			path = Majan2;
 			sourceTree = "<group>";
@@ -307,9 +313,11 @@
 				557477DC1F1FDB57003FBC6F /* Yaku88.swift in Sources */,
 				555ACCFF1F208F6D00DE2051 /* Yaku24.swift in Sources */,
 				555ACD0B1F20977400DE2051 /* Yaku2.swift in Sources */,
+				55D062821F20D1F400556C90 /* Toitukei.swift in Sources */,
 				557477321F1F895F003FBC6F /* ViewController.swift in Sources */,
 				555ACCF91F20894F00DE2051 /* Yaku64.swift in Sources */,
 				555ACD051F20946100DE2051 /* Yaku8.swift in Sources */,
+				55D062841F20D86100556C90 /* YakuToitu.swift in Sources */,
 				555ACD091F20968B00DE2051 /* Yaku4.swift in Sources */,
 				555ACD031F20938100DE2051 /* Yaku12.swift in Sources */,
 				555ACCFD1F208E8000DE2051 /* Yaku32.swift in Sources */,

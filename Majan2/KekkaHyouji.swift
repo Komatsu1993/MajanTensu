@@ -19,7 +19,7 @@ class KekkaHyouji: UIViewController {
         
         var x:String = ""
         for i in str {
-            x += i
+            x += (i + "\n")
         }
         print(x)
         mentsu1.text = x
