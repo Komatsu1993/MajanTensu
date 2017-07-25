@@ -237,6 +237,21 @@
                                     <segue destination="vJB-vH-BCg" kind="presentation" identifier="toKekka" id="NCF-dw-UPT"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q3E-cd-v59">
+                                <rect key="frame" x="496" y="142" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="待ち" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfJ-Kb-asg">
+                                <rect key="frame" x="521" y="196" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -248,6 +263,7 @@
                         <outlet property="kui2" destination="8I7-Sq-NcC" id="3wd-xb-J68"/>
                         <outlet property="kui3" destination="U7h-X5-ssU" id="vLk-2G-zDV"/>
                         <outlet property="kui4" destination="EfL-Dt-7ac" id="4XW-Sn-IKE"/>
+                        <outlet property="mati" destination="Q3E-cd-v59" id="bbJ-c4-RVZ"/>
                         <outlet property="men1" destination="CeD-5e-Tos" id="P7n-fX-6da"/>
                         <outlet property="men2" destination="OBh-vw-k4P" id="Cio-Ez-Igy"/>
                         <outlet property="men3" destination="6MQ-p5-kTx" id="cFn-O3-kVr"/>
@@ -258,7 +274,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bvw-YF-PJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="igG-gl-XzP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="802.848575712144" y="136.80000000000001"/>
+            <point key="canvasLocation" x="685" y="70"/>
         </scene>
         <!--Toitukei-->
         <scene sceneID="j5t-8u-sRA">

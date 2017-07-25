@@ -28,19 +28,21 @@ class CheckYaku {
     
     var all = [Int]()   // 全ての牌の中身
     var naki = [Bool]() // 各面子が鳴いているかどうか true:鳴き false:門前
+    var naki2 = [[Int]]() // 鳴き面子の構成
     var tumo = false    // ツモ上がりかどうか true:ツモ false:ロン
     var ba = -1         // 場風 0:東 1:南 2:西 3:北
     var ie = -1         // 自風 0:東 1:南 2:西 3:北
+    var mati = -1       // 待ち牌
     
     var yaku = [Int](repeating:0, count:81)
     
     // 初期化
-    init(m1:[Int], m2:[Int], m3:[Int], m4:[Int], h:Int, k1:Int, k2:Int, k3:Int, k4:Int, m:[Int], p:[Int], s:[Int], j:[Int], a:[Int], n:[Bool], t:Bool, b:Int, i:Int) {
+    init(m1:[Int], m2:[Int], m3:[Int], m4:[Int], h:Int, k1:Int, k2:Int, k3:Int, k4:Int, m:[Int], p:[Int], s:[Int], j:[Int], a:[Int], n:[Bool], n2:[[Int]], t:Bool, b:Int, i:Int, w:Int) {
         self.men1 = m1; self.men2 = m2; self.men3 = m3; self.men4 = m4;
         self.head = h
         self.kata1 = k1; self.kata2 = k2; self.kata3 = k3; self.kata4 = k4;
         self.man = m; self.pin = p; self.sou = s; self.ji = j;
-        self.all = a; self.naki = n; self.tumo = t; self.ba = b; self.ie = i
+        self.all = a; self.naki = n; self.naki2 = n2; self.tumo = t; self.ba = b; self.ie = i; self.mati = w
     }
     
     // チェック関数 : 上がり役を数値配列で返す
@@ -157,6 +159,7 @@ class CheckYaku {
         x1.minkan(k1: kata1, k2: kata2, k3: kata3, k4: kata4, n: naki)
         x1.cheimen(m: man, p: pin, s: sou)
         x1.uzu(j: ji)
+        x1.penchan(w: mati, a: all, n:naki, n2: naki2, m1: men1, m2: men2, m3: men3, m4: men4, k1: kata1, k2: kata2, k3: kata3, k4: kata4, h: head)
         x1.tumoagari(t: tumo)
         yaku = x1.yaku
         

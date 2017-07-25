@@ -146,12 +146,70 @@ class Yaku1 {
         }
     }
     
-    // 77,ペンチャン : 引数
+    // ** : 待ち判定をするために、まず待ちが一種か確かめる
+    // 一種ならtrue
+    func matiNum(w:Int, a:[Int], n2:[[Int]])->Bool {
+        var a = a
+        a[w] -= 1
+        var check = 0
+        for i in 0...33 {
+            a[i] += 1
+            let x = AgariHantei(n: n2)
+            x.headSearch(a: a)
+            let y = x.agari
+            if y.count != 0, i != w {
+                check += 1
+            }
+            a[i] -= 1
+        }
+        if check != 0 {
+            return false
+        } else {
+            return true
+        }
+    }
     
-    // 78,カンチャン : 引数
-    
-    // 79,タンキ : 引数
-    
+    // 77,ペンチャン 78,カンチャン 79,タンキ
+    // 引数 : mati, all, naki2, men1, men2, men3, men4, kata1, kata2, kata3, kata4, head
+    func penchan(w:Int, a:[Int],n:[Bool], n2:[[Int]], m1:[Int], m2:[Int], m3:[Int], m4:[Int], k1:Int, k2:Int, k3:Int, k4:Int, h:Int)->() {
+        if matiNum(w: w, a: a, n2: n2) {
+            print("まちok")
+            if h == w {
+                if yaku[79] != -1 {
+                    yaku[79] += 1
+                }
+            } else {
+                if m1.contains(w), k1 == 0 {
+                    if m1[1] == w, yaku[78] != -1 {
+                        yaku[78] = 1
+                    } else {
+                        yaku[77] = 1
+                    }
+                } else if m2.contains(w), k2 == 0 {
+                    if m2[1] == w, yaku[78] != -1 {
+                        yaku[78] = 1
+                    } else {
+                        yaku[77] = 1
+                    }
+                } else if m3.contains(w), k3 == 0 {
+                    if m3[1] == w, yaku[78] != -1 {
+                        yaku[78] = 1
+                    } else {
+                        yaku[77] = 1
+                    }
+                } else {
+                    if m3[1] == w, yaku[78] != -1 {
+                        yaku[78] = 1
+                    } else {
+                        yaku[77] = 1
+                    }
+                }
+            }
+        } else {
+            print("失敗")
+        }
+    }
+
     // 80,ツモ : 引数 tumo
     func tumoagari(t:Bool)->() {
         if t, yaku[80] != -1 {

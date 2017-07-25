@@ -54,6 +54,7 @@ class Yaku2 {
     func pinhu(k1:Int, k2:Int, k3:Int, k4:Int, h:Int)->() {
         if yaku[63] != -1, k1 == 0, k2 == 0, k3 == 0, k4 == 0, h <= 26{
             yaku[63] = 1
+            yaku[76] = -1
         }
     }
     

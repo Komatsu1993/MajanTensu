@@ -17,6 +17,7 @@ class TensuCal: UIViewController {
     var mentsu3 = [Int]()
     var mentsu4 = [Int]()
     var head = -1
+    var matiPai = -1
     
     var kata1 = -1, kata2 = -1, kata3 = -1, kata4 = -1
     
@@ -40,6 +41,7 @@ class TensuCal: UIViewController {
     @IBOutlet weak var men3: UITextField!
     @IBOutlet weak var men4: UITextField!
     @IBOutlet weak var men5: UITextField!
+    @IBOutlet weak var mati: UITextField!
     
     
     @IBOutlet weak var kui1: UISwitch!
@@ -80,6 +82,7 @@ class TensuCal: UIViewController {
             mentsu4.append(Int(i)!)
         }
         head = Int(men5.text!)!
+        matiPai = Int(mati.text!)!
         
         // マンズ、ピンズ、ソウズ、ジパイに分ける
         man = [Int](repeating:0, count:9)
@@ -260,7 +263,7 @@ class TensuCal: UIViewController {
                 print("ここまで")
             }
 
-            let check2 = CheckYaku(m1: x[i][1], m2: x[i][2], m3: x[i][3], m4: x[i][4], h: x[i][0][0], k1: kata1, k2: kata2, k3: kata3, k4: kata4, m: man, p: pin, s: sou, j: ji, a: all2, n: naki2, t: tumo, b: ba, i: ie)
+            let check2 = CheckYaku(m1: x[i][1], m2: x[i][2], m3: x[i][3], m4: x[i][4], h: x[i][0][0], k1: kata1, k2: kata2, k3: kata3, k4: kata4, m: man, p: pin, s: sou, j: ji, a: all2, n: naki2, n2: nakiMentsu, t: tumo, b: ba, i: ie, w: matiPai)
             
             yakumeis.append(check2.henkan(yaku: check2.check()))
             
