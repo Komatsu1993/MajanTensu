@@ -10,7 +10,7 @@ import UIKit
 
 class KekkaHyouji: UIViewController {
 
-    var str = [String]()
+    var str = [[String]]()
     @IBOutlet weak var mentsu1: UILabel!
     
     override func viewDidLoad() {
@@ -18,8 +18,11 @@ class KekkaHyouji: UIViewController {
         // Do any additional setup after loading the view.
         
         var x:String = ""
-        for i in str {
-            x += (i + "\n")
+        for j in str {
+            for i in j {
+                x += i
+            }
+            x += "\n"
         }
         print(x)
         mentsu1.text = x

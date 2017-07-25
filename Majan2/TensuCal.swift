@@ -33,6 +33,7 @@ class TensuCal: UIViewController {
     var ie = -1
     
     var yakumei = [String]()
+    var yakumeis = [[String]]()
 
     @IBOutlet weak var men1: UITextField!
     @IBOutlet weak var men2: UITextField!
@@ -55,6 +56,7 @@ class TensuCal: UIViewController {
     // 全ての処理をする
     @IBAction func shori(_ sender: Any) {
         print("呼び出し")
+        yakumeis = [[String]]()
         
         // 面子１-４まで入れる
         mentsu1 = []
@@ -78,44 +80,6 @@ class TensuCal: UIViewController {
             mentsu4.append(Int(i)!)
         }
         head = Int(men5.text!)!
-        
-        // 形の判別を行う
-        if mentsu1[0] - mentsu1[1] != 0 {
-            kata1 = 0
-        } else {
-            if mentsu1.count == 3 {
-                kata1 = 1
-            } else {
-                kata1 = 2
-            }
-        }
-        if mentsu2[0] - mentsu2[1] != 0 {
-            kata2 = 0
-        } else {
-            if mentsu2.count == 3 {
-                kata2 = 1
-            } else {
-                kata2 = 2
-            }
-        }
-        if mentsu3[0] - mentsu3[1] != 0 {
-            kata3 = 0
-        } else {
-            if mentsu3.count == 3 {
-                kata3 = 1
-            } else {
-                kata3 = 2
-            }
-        }
-        if mentsu4[0] - mentsu4[1] != 0 {
-            kata4 = 0
-        } else {
-            if mentsu4.count == 3 {
-                kata4 = 1
-            } else {
-                kata4 = 2
-            }
-        }
         
         // マンズ、ピンズ、ソウズ、ジパイに分ける
         man = [Int](repeating:0, count:9)
@@ -190,31 +154,117 @@ class TensuCal: UIViewController {
         
         // ieを作る
         ie = jikaze.selectedSegmentIndex
+
         
-        let check = CheckYaku(m1: mentsu1, m2: mentsu2, m3: mentsu3, m4: mentsu4, h: head, k1: kata1, k2: kata2, k3: kata3, k4: kata4, m: man, p: pin, s: sou, j: ji, a: all, n: naki, t: tumo, b: ba, i: ie)
+        // 高点法の採用手順
+        // 先頭に鳴きを詰めたBool型配列naki2とnakiMentsuを生成
+        var naki2 = [false, false, false, false]
+        var num = 0
+        var nakiMentsu = [[Int]]()
+        var all2 = all
+        if kui1.isOn {
+            nakiMentsu.append(mentsu1)
+            naki2[num] = true
+            num += 1
+            for i in 0...mentsu1.count - 1 {
+                all[mentsu1[i]] -= 1
+            }
+        }
+        if kui2.isOn {
+            nakiMentsu.append(mentsu2)
+            naki2[num] = true
+            num += 1
+            for i in 0...mentsu2.count - 1 {
+                all[mentsu2[i]] -= 1
+            }
+        }
+        if kui3.isOn {
+            nakiMentsu.append(mentsu3)
+            naki2[num] = true
+            num += 1
+            for i in 0...mentsu3.count - 1 {
+                all[mentsu3[i]] -= 1
+            }
+        }
+        if kui4.isOn {
+            nakiMentsu.append(mentsu4)
+            naki2[num] = true
+            num += 1
+            for i in 0...mentsu4.count - 1 {
+                all[mentsu4[i]] -= 1
+            }
+        }
+        let test = AgariHantei(n: nakiMentsu)
+        test.headSearch(a: all)
+        let x = test.agari
         
-        yakumei = check.henkan(yaku: check.check())
-        
-        
-        print(mentsu1)
-        print(mentsu2)
-        print(mentsu3)
-        print(mentsu4)
-        print(head)
-        print(kata1)
-        print(kata2)
-        print(kata3)
-        print(kata4)
-        print(man)
-        print(pin)
-        print(sou)
-        print(ji)
-        print(all)
-        print(naki)
-        print(tumo)
-        print(ba)
-        print(ie)
-        print(yakumei)
+        for i in 0...x.count - 1 {
+            
+            // 形の判別を行う
+            if x[i][1][0] - x[i][1][1] != 0 {
+                kata1 = 0
+            } else {
+                if x[i][1].count == 3 {
+                    kata1 = 1
+                } else {
+                    kata1 = 2
+                }
+            }
+            if x[i][2][0] - x[i][2][1] != 0 {
+                kata2 = 0
+            } else {
+                if x[i][2].count == 3 {
+                    kata2 = 1
+                } else {
+                    kata2 = 2
+                }
+            }
+            if x[i][3][0] - x[i][3][1] != 0 {
+                kata3 = 0
+            } else {
+                if x[i][3].count == 3 {
+                    kata3 = 1
+                } else {
+                    kata3 = 2
+                }
+            }
+            if x[i][4][0] - x[i][4][1] != 0 {
+                kata4 = 0
+            } else {
+                if x[i][4].count == 3 {
+                    kata4 = 1
+                } else {
+                    kata4 = 2
+                }
+                
+                print("ここから")
+                print(x[i][1])
+                print(x[i][2])
+                print(x[i][3])
+                print(x[i][4])
+                print(x[i][0][0])
+                print(kata1)
+                print(kata2)
+                print(kata3)
+                print(kata4)
+                print(man)
+                print(pin)
+                print(sou)
+                print(ji)
+                print(all2)
+                print(naki)
+                print(tumo)
+                print(ba)
+                print(ie)
+                print(yakumei)
+                print("ここまで")
+            }
+
+            let check2 = CheckYaku(m1: x[i][1], m2: x[i][2], m3: x[i][3], m4: x[i][4], h: x[i][0][0], k1: kata1, k2: kata2, k3: kata3, k4: kata4, m: man, p: pin, s: sou, j: ji, a: all2, n: naki2, t: tumo, b: ba, i: ie)
+            
+            yakumeis.append(check2.henkan(yaku: check2.check()))
+            
+        }
         
     }
     
@@ -241,7 +291,7 @@ class TensuCal: UIViewController {
         if segue.identifier == "toKekka" {
 //            let x = men1.text!
             let tes = segue.destination as! KekkaHyouji
-            tes.str = yakumei
+            tes.str = yakumeis
         }
     }
 

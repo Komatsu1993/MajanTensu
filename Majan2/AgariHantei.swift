@@ -8,6 +8,8 @@
 
 import Foundation
 
+// 上がり判定をするメソッド
+// 常にヘッドが最初、鳴きがあればそれが次に入る配列を生成する
 class AgariHantei {
     
     var all = [Int]()       // 全ての牌姿
@@ -15,8 +17,7 @@ class AgariHantei {
     var mentsu = [[Int]]()  // 面子構成を入れる
     var agari = [[[Int]]]() // mentsuたちを入れる
     
-    init(a:[Int], n:[[Int]]) {
-        self.all = a
+    init(n:[[Int]]) {
         self.naki = n
     }
     
@@ -24,19 +25,21 @@ class AgariHantei {
     // ヘッド候補を取り出し、それをmentsuのヘッド部分に入れ、残りを調査する
     func headSearch(a:[Int])->() {
         var a = a
-        mentsu = naki
         
         var num = 0
         for i in a {
             if i >= 2 {
                 a[num] -= 2
                 mentsu.append([num, num])
+                mentsu += naki
                 mentsuSearch(a: a)
                 
-                a[num] += 2; mentsu = naki;
+                a[num] += 2; mentsu = [[Int]]();
             }
             num += 1
         }
+        
+        print(agari)
     }
     
     // ヘッドを抜いた面子で上がりが成立するか判定する
@@ -178,7 +181,6 @@ class AgariHantei {
     func shuntsuSearch(a:[Int])->Bool {
         var a = a
         var shuntsu = [[Int]]()
-        print(a)
         
         var shuntsuHead = [Int]()
         var num = 0
@@ -199,7 +201,6 @@ class AgariHantei {
                 shuntsu.append([i, i + 1, i + 2])
             }
         }
-        print(a)
         let test = [Int](repeating: 0, count: 34)
         if a == test {
             mentsu += shuntsu
