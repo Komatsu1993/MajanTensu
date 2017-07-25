@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		550836361F21858900E55BF4 /* ToituKekkahyouji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550836351F21858900E55BF4 /* ToituKekkahyouji.swift */; };
+		5537E5C91F26C31300EBDDFE /* AgariHantei.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5537E5C81F26C31300EBDDFE /* AgariHantei.swift */; };
 		555ACCF91F20894F00DE2051 /* Yaku64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555ACCF81F20894F00DE2051 /* Yaku64.swift */; };
 		555ACCFB1F208D6000DE2051 /* Yaku48.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555ACCFA1F208D6000DE2051 /* Yaku48.swift */; };
 		555ACCFD1F208E8000DE2051 /* Yaku32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555ACCFC1F208E8000DE2051 /* Yaku32.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		550836351F21858900E55BF4 /* ToituKekkahyouji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToituKekkahyouji.swift; sourceTree = "<group>"; };
+		5537E5C81F26C31300EBDDFE /* AgariHantei.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgariHantei.swift; sourceTree = "<group>"; };
 		555ACCF81F20894F00DE2051 /* Yaku64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yaku64.swift; sourceTree = "<group>"; };
 		555ACCFA1F208D6000DE2051 /* Yaku48.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yaku48.swift; sourceTree = "<group>"; };
 		555ACCFC1F208E8000DE2051 /* Yaku32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yaku32.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				555ACD0A1F20977400DE2051 /* Yaku2.swift */,
 				555ACD0C1F20989E00DE2051 /* Yaku1.swift */,
 				55D062831F20D86100556C90 /* YakuToitu.swift */,
+				5537E5C81F26C31300EBDDFE /* AgariHantei.swift */,
 			);
 			path = Majan2;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				TargetAttributes = {
 					5574772B1F1F895F003FBC6F = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = YUFF6F33EC;
 						ProvisioningStyle = Automatic;
 					};
 					5574773F1F1F895F003FBC6F = {
@@ -315,6 +319,7 @@
 			files = (
 				557477DC1F1FDB57003FBC6F /* Yaku88.swift in Sources */,
 				555ACCFF1F208F6D00DE2051 /* Yaku24.swift in Sources */,
+				5537E5C91F26C31300EBDDFE /* AgariHantei.swift in Sources */,
 				555ACD0B1F20977400DE2051 /* Yaku2.swift in Sources */,
 				55D062821F20D1F400556C90 /* Toitukei.swift in Sources */,
 				557477321F1F895F003FBC6F /* ViewController.swift in Sources */,
@@ -486,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YUFF6F33EC;
 				INFOPLIST_FILE = Majan2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chiba.Komatsu.Majan2;
@@ -498,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YUFF6F33EC;
 				INFOPLIST_FILE = Majan2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chiba.Komatsu.Majan2;
